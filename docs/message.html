@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Message pour Emeline</title>
+    <link rel="stylesheet" href="message.css" />
+  </head>
+  <body>
+    <main class="message-page">
+      <form class="message-form" id="message-form">
+        <p class="saved-person" id="saved-person" hidden></p>
+        <input id="prenom" name="prenom" type="text" placeholder="Prenom" autocomplete="given-name" required />
+        <textarea id="message" name="message" placeholder="Message" rows="5" maxlength="180" required></textarea>
+        <button type="submit">Envoyer</button>
+        <p class="status" id="status" role="status"></p>
+      </form>
+
+      <section class="recent-messages" aria-label="Messages recents">
+        <div id="recent-messages"></div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" hidden>
+      <strong id="toast-title"></strong>
+      <span id="toast-text"></span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="message.js"></script>
+  </body>
+</html>

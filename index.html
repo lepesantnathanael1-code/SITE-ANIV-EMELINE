@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anniversaire 20ans Emeline</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page" aria-live="polite">
+      <img class="picture" src="PICTURE.png" alt="" />
+
+      <div class="countdown" id="countdown" hidden aria-label="Decompte">
+        <span id="days">00</span>
+        <span id="hours">00</span>
+        <span id="minutes">00</span>
+        <span id="seconds">00</span>
+      </div>
+
+      <div class="messages" id="messages" aria-live="polite"></div>
+
+      <a class="qr-link" id="qr-link" href="message.html" aria-label="Ajouter un message">
+        <span class="qr-title">Message</span>
+        <img id="qr-code" alt="" />
+      </a>
+
+      <div class="message-count" id="message-count" aria-live="polite">0 message</div>
+
+      <button class="pdf-download" id="pdf-download" type="button" hidden>
+        Telecharger le livre de messages
+      </button>
+    </main>
+
+    <dialog class="time-dialog" id="time-dialog">
+      <form method="dialog" class="dialog-box" id="time-form">
+        <input id="target-time" name="target-time" type="time" aria-label="Heure" required />
+        <button type="submit" aria-label="Lancer">OK</button>
+      </form>
+    </dialog>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
+    <script src="supabase-config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
