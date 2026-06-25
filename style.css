@@ -63,6 +63,17 @@ body {
   gap: clamp(8px, 2vw, 18px);
 }
 
+.countdown-title {
+  grid-column: 1 / -1;
+  color: #ffffff;
+  font-size: clamp(1.15rem, 3vw, 2.45rem);
+  font-weight: 900;
+  line-height: 1.05;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 4px 22px rgba(0, 0, 0, 0.58);
+}
+
 .countdown span {
   position: relative;
   overflow: hidden;
