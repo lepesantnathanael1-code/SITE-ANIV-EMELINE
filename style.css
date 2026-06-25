@@ -24,6 +24,14 @@ body {
   background: #0b3d45;
 }
 
+body.screen-blackout::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #000000;
+}
+
 .page {
   position: relative;
   width: 100vw;

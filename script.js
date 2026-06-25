@@ -57,6 +57,7 @@ function startCountdown(target) {
   confettiDone = false;
   pdfDone = false;
   pdfDownload.hidden = true;
+  document.body.classList.remove("screen-blackout");
   countdown.hidden = false;
 
   function tick() {
@@ -66,6 +67,7 @@ function startCountdown(target) {
     if (remaining <= 0) {
       clearInterval(timerId);
       renderTime(0);
+      document.body.classList.add("screen-blackout");
       if (!confettiDone) {
         confettiDone = true;
         launchConfetti();
